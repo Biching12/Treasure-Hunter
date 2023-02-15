@@ -65,8 +65,8 @@ export class Explorer extends Container {
         };
     }
     update(deltaTime) {
-        this.explorer.x += this.vx;
-        this.explorer.y += this.vy;
+        this.x += this.vx;
+        this.y += this.vy;
 
         const exploreHitsWall = contain(this.explorer, { x: -20, y: -250, width: 440, height: 230 })
         console.log(exploreHitsWall);

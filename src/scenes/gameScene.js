@@ -46,7 +46,11 @@ export class GameScene extends Container {
         });
         if (this.collision.collisondetect(this.explorer, this.treasure)) {
             this.treasure.x = this.explorer.x;
-            this.treasure.y = this.explorer.y;
+            this.treasure.y = this.explorer.y - 6;
+        }
+        if (this.collision.collisondetect(this.treasure, this.door)) {
+            this.gameWin.visible = true;
+            this.gameContainer.visible = false;
         }
     }
     initScene() {
